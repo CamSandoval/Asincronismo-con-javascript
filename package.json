@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gh-pages": "gh-pages -d landing"
+    "deploy": "gh-pages -d landing"
   },
   "keywords": [
     "javascript"
