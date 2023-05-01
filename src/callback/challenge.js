@@ -1,5 +1,5 @@
 //Primero debemos declarar e importar el paquete de XMLHttpRequest, que nos permite utilizar objetos (XHR) para interactuar con servidores (en este caso la API de Platzi) para esto hacemos:
-const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest; 
+import { XMLHttpRequest } from "xmlhttprequest"; 
 //Llamado a la API con la creacion de una variable que contenga la url de la pagina
 const API = 'https://api.escuelajs.co/api/v1';
 
@@ -26,7 +26,7 @@ fetchData(`${API}/products`,function(error1,data1){
     if(error1) return console.error(error1);
     fetchData(`${API}/products/${data1[0].id}`,function(error2,data2){
         if(error2) return console.error(error2);
-        fetchData(`${API}/categories/${data2?.category?.id}`,function(error3,data3){
+        fetchData(`${API}/categories/${data2.category.id}`,function(error3,data3){
             if (error3) return console.error(error3);
             console.log(data1[0]);
             console.log('________________________________________');
